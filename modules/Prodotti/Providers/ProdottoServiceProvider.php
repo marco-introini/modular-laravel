@@ -14,5 +14,8 @@ class ProdottoServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->loadMigrationsFrom(__DIR__.'/../Database/migrations');
+        $this->mergeConfigFrom(__DIR__.'/../config.php','prodotto');
+
+        $this->app->register(RouteServiceProvider::class);
     }
 }
