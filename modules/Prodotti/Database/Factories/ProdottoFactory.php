@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Factories;
+namespace Modules\Prodotti\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Carbon;
@@ -10,7 +10,7 @@ class ProdottoFactory extends Factory
 {
     protected $model = Prodotto::class;
 
-    public function definition()
+    public function definition(): array
     {
         return [
             'nome' => $this->faker->word(),
